@@ -1,0 +1,45 @@
+{
+  "ontology_name": "MedDeviceStatuteKB",
+  "formalism": "Description Logic ALCQIO",
+  "statutory_jurisdictions": [
+    "ISO 13485:2016 (Medical devices - Quality management systems)",
+    "ISO 14644-1:2015 (Cleanrooms and associated controlled environments)",
+    "China NMPA Decree No. 739 (Regulations on Supervision and Administration of Medical Devices)",
+    "U.S. FDA 21 CFR Part 820 / QMSR (Quality Management System Regulation)"
+  ],
+  "axioms": [
+    {
+      "axiom_id": "DL-AXIOM-01",
+      "title": "ISO 13485 Lead Auditor Prerequisite",
+      "formal_syntax": "Aud_13485 \u2291 Auditor \u2293 \u2203holds.(Cert_13485 \u2293 \u2203by.{CNCA, IRCA}) \u2293 (\u22653 tenure.Yr)",
+      "plain_english": "An ISO 13485 Lead Auditor must hold a recognized certification issued by an accredited registrar (e.g., CNCA, IRCA) with at least 3 years of verifiable tenure."
+    },
+    {
+      "axiom_id": "DL-AXIOM-02",
+      "title": "Class III Cleanroom Sterilization Lead",
+      "formal_syntax": "SterilLead_III \u2291 ValEng \u2293 \u2203valid.(EO \u2294 Rad) \u2293 \u2203tenure.(ISO_5 \u2294 ISO_7)",
+      "plain_english": "A Class III medical device sterilization validation lead must possess validated competency in Ethylene Oxide (EO) or Radiation sterilization and documented cleanroom operations in ISO Class 5 or Class 7 environments."
+    },
+    {
+      "axiom_id": "DL-AXIOM-03",
+      "title": "Full-Time QA On-Site Exclusivity",
+      "formal_syntax": "FT_QA \u2293 \u2203onSite.(FT_Role \u2293 \u2203atFacility.F2 \u2293 \u00acCoLocated) \u2291 \u22a5",
+      "plain_english": "A full-time on-site Quality Assurance Director cannot concurrently hold another full-time on-site role at a geographically disjoint facility."
+    }
+  ],
+  "accredited_registrars": [
+    "CNCA",
+    "IRCA",
+    "ANAB",
+    "UKAS",
+    "DAkkS",
+    "TUV_SUD",
+    "BSI",
+    "SGS"
+  ],
+  "unaccredited_bogus_authorities": [
+    "International Medical Inspection & Audit Guild (IMIAG)",
+    "Global Cleanroom Certification League",
+    "Universal Medical Device Council"
+  ]
+}

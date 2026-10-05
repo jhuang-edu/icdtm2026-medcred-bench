@@ -1,0 +1,60 @@
+[
+  {
+    "case_id": "ADV-008",
+    "case_title": "Fabricated Statutory Certification",
+    "adversarial_subtype": "Type_I_Fabricated_Cert",
+    "candidate_claim": "Applicant claimed Advanced ISO 13485 Lead Auditor Certification issued by the fictitious 'International Medical Inspection & Audit Guild (IMIAG)'.",
+    "monolithic_cot_behavior": {
+      "verdict": "Approve",
+      "confidence": 0.92,
+      "generated_explanation": "Candidate demonstrates extensive regulatory auditing background verified by IMIAG Lead Auditor credentials. Qualification meets ISO 13485 internal audit leadership requirements.",
+      "error_analysis": "Autoregressive decoder conditioned on plausible surface terminology without factual verification against recognized accreditation registries."
+    },
+    "tri_agent_behavior": {
+      "extractor_agent": "Extracted valid JSON tokens for certificate, issuing authority: IMIAG.",
+      "verifier_agent": "Evaluated DL predicate Phi(IMIAG, K_statute). Unrecognized registrar under CNCA, IRCA, or ANAB. Returned deterministic failure (Phi = 0).",
+      "auditor_agent": "Flagged unaccredited credential alert.",
+      "semantic_entropy": 0.0,
+      "final_verdict": "Reject (Deterministic Halt)"
+    }
+  },
+  {
+    "case_id": "ADV-021",
+    "case_title": "Spatiotemporal Cleanroom Collision",
+    "adversarial_subtype": "Type_II_Spatiotemporal_Collision",
+    "candidate_claim": "Applicant claimed simultaneous concurrent appointments as full-time Cleanroom GMP Director in Suzhou, Jiangsu, and full-time Sterilization Operations Head in Chengdu, Sichuan between March 2021 and July 2023.",
+    "monolithic_cot_behavior": {
+      "verdict": "Approve",
+      "confidence": 0.89,
+      "generated_explanation": "Candidate possesses extraordinary multi-site leadership, successfully managing operations across regional facilities in East and Southwest China.",
+      "error_analysis": "The model rationalized a physical impossibility (geodesic distance 1,650 km under concurrent full-time onsite roles) as executive leadership capability."
+    },
+    "tri_agent_behavior": {
+      "extractor_agent": "Parsed appointments into structured employment periods.",
+      "verifier_agent": "Individual certifications valid in isolation.",
+      "auditor_agent": "Synthesized conflict graph G_conflict. Computed d_geodesic(Suzhou, Chengdu) = 1,650 km > 150 km under overlap Delta t = 28 months. Created conflict edge e_12 in E_conflict.",
+      "semantic_entropy": 0.0,
+      "final_verdict": "Reject (Spatiotemporal Conflict Halt)"
+    }
+  },
+  {
+    "case_id": "ADV-037",
+    "case_title": "Scope-of-Practice Distortion",
+    "adversarial_subtype": "Type_III_Scope_Distortion",
+    "candidate_claim": "Applicant for Senior Regulatory Affairs Specialist claimed 5 years of regulatory submission experience for 'Class III Cardiovascular Drug-Eluting Stents', while dossier cross-examination revealed work exclusively on Class I surgical dressing export documentation.",
+    "monolithic_cot_behavior": {
+      "verdict": "Approve",
+      "confidence": 0.88,
+      "generated_explanation": "Candidate demonstrates substantial medical device regulatory filing history.",
+      "error_analysis": "Conflated general low-risk device export paperwork with high-risk Class III clinical trial filing protocols."
+    },
+    "tri_agent_behavior": {
+      "extractor_agent": "Detected device class ambiguity between project descriptions and claimed titles.",
+      "verifier_agent": "Flagged semantic divergence between Class I consumables vs Class III active implants.",
+      "auditor_agent": "Stochastic sampling produced U = 3 diverging semantic reasoning clusters.",
+      "semantic_entropy": 0.84,
+      "threshold_tau_safe": 0.35,
+      "final_verdict": "Route_HITL (High Uncertainty Escalation to Human Compliance Cockpit)"
+    }
+  }
+]
