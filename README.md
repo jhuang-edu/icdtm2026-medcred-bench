@@ -3,12 +3,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python: 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Reproducibility: Deterministic](https://img.shields.io/badge/Reproducibility-Verified%20(100%25)-brightgreen.svg)]()
-[![Target: ACM ICPS](https://img.shields.io/badge/Publication-ICDTM%202026-orange.svg)]()
+[![Status: Under Review](https://img.shields.io/badge/Status-Under%20Review-blue.svg)]()
 
 Official open-source evaluation benchmark, Description Logic ontology schemas, and reproducibility audit suite for the research paper:
 
 > **Mitigating Generative Hallucinations in Compliance-Critical Medical Manufacturing Recruitment: A Tri-Agent Verification Architecture with Semantic Entropy Calibration**  
-> *Target Venue: 2026 International Conference on Digital Technology Management (ICDTM 2026), ACM ICPS*  
+> *Status: Under Peer Review at ICDTM 2026 (ACM ICPS)*  
 > *Contact: junjun ([3588@duck.com](mailto:3588@duck.com))*
 
 ---
@@ -137,13 +137,11 @@ python simulate_tri_agent_uq.py
 If you find `MedCred-Bench` or the Tri-Agent Verification Architecture helpful in your research, please cite our paper:
 
 ```bibtex
-@inproceedings{medcred2026mitigating,
+@misc{medcred2026mitigating,
   title={Mitigating Generative Hallucinations in Compliance-Critical Medical Manufacturing Recruitment: A Tri-Agent Verification Architecture with Semantic Entropy Calibration},
   author={MedCred-Bench Contributors},
-  booktitle={Proceedings of the 2026 International Conference on Digital Technology Management (ICDTM 2026)},
-  publisher={ACM International Conference Proceeding Series (ICPS)},
   year={2026},
-  doi={10.1145/XXXXXXX.XXXXXXX}
+  note={Under peer review at ICDTM 2026 (ACM ICPS)}
 }
 ```
 
