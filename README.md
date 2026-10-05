@@ -1,11 +1,10 @@
-# MedCred-Bench: Reproducibility Package and Statutory Benchmark
+# MedCred-Bench: Evaluation Benchmark and Replication Package
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python: 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
-[![Reproducibility: Deterministic](https://img.shields.io/badge/Reproducibility-Verified%20(100%25)-brightgreen.svg)]()
 [![Status: Under Review](https://img.shields.io/badge/Status-Under%20Review-blue.svg)]()
 
-Official open-source evaluation benchmark, Description Logic ontology schemas, and reproducibility audit suite for the research paper:
+Evaluation benchmark, Description Logic ontology schemas, and replication scripts for the research paper:
 
 > **Mitigating Generative Hallucinations in Compliance-Critical Medical Manufacturing Recruitment: A Tri-Agent Verification Architecture with Semantic Entropy Calibration**  
 > *Status: Under Peer Review at ICDTM 2026 (ACM ICPS)*  
@@ -13,7 +12,7 @@ Official open-source evaluation benchmark, Description Logic ontology schemas, a
 
 ---
 
-## ⚖️ Statutory Data Governance & Privacy Statement
+## Statutory Data Governance and Privacy Statement
 
 Pursuant to the **Personal Information Protection Law of the People's Republic of China (PIPL, Articles 13 & 28)**, the **European Union General Data Protection Regulation (EU GDPR, Article 9)**, and corporate Non-Disclosure Agreements (NDAs):
 
@@ -23,7 +22,7 @@ Pursuant to the **Personal Information Protection Law of the People's Republic o
 
 ---
 
-## ⚡ 10-Second Quickstart: Deterministic Table 2 Metric Audit
+## Quickstart: Replicating Table 2 Metrics
 
 To independently audit the **Table 2** confusion matrices, accuracy rates, and 95% Wilson Score / Bootstrap confidence intervals reported in the manuscript, run the zero-dependency verification script (requires standard Python 3.8+ with no third-party libraries):
 
@@ -48,7 +47,7 @@ python replicate_table2_metrics.py
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 medcred-bench/
@@ -67,7 +66,7 @@ medcred-bench/
 
 ---
 
-## 🔬 Benchmark Specification (`MedCred-Bench`)
+## Benchmark Specification (`MedCred-Bench`)
 
 `MedCred-Bench` models multi-agent verification under high-stakes medical device compliance requirements (e.g., ISO 13485:2016, ISO 14644 cleanroom, China NMPA Decree No. 739, U.S. FDA 21 CFR Part 820 QMSR).
 
@@ -90,7 +89,7 @@ Partitioning is enforced strictly at the **dossier level** to avoid cross-task c
 
 ---
 
-## 🧠 Tri-Agent Architecture Overview
+## Tri-Agent Architecture Overview
 
 ```text
 Raw Candidate Dossier (D)
@@ -111,14 +110,14 @@ Raw Candidate Dossier (D)
         ├── DeBERTa-v3-large-MNLI bidirectional entailment clustering
         └── Shannon Semantic Entropy SE(D, q) computation
         │
-        ├── If SE > tau_safe (0.35) ──► [Human-in-the-Loop Cockpit (Route_HITL)]
+        ├── If SE > tau_safe (0.35) ──► [Human-in-the-Loop Review (Route_HITL)]
         ├── If SE <= 0.35 and Majority = 1 ──► [Autonomous Approval (Approve)]
         └── If SE <= 0.35 and Majority = 0 ──► [Autonomous Rejection (Reject)]
 ```
 
 ---
 
-## 🚀 Running Full End-to-End Simulations
+## Running Full Simulation
 
 To run the complete benchmark generation, threshold calibration, baseline comparisons (Single LLM CoT, Ensemble Majority, Dual-Agent, Tri-Agent), and ablation experiments:
 
@@ -132,7 +131,7 @@ python simulate_tri_agent_uq.py
 
 ---
 
-## 📜 Citation
+## Citation
 
 If you find `MedCred-Bench` or the Tri-Agent Verification Architecture helpful in your research, please cite our paper:
 
@@ -147,7 +146,7 @@ If you find `MedCred-Bench` or the Tri-Agent Verification Architecture helpful i
 
 ---
 
-## 📬 Contact & Support
+## Contact and Support
 
 For inquiries regarding benchmark access, Description Logic schemas, or evaluation protocols:
 * **Contact**: junjun
